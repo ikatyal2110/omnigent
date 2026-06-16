@@ -88,6 +88,12 @@ _HARNESS_MODULES: dict[str, str] = {
     # counterpart to the terminal-first ``goose-native`` TUI harness. Tool
     # approvals surface as web elicitation cards via session/request_permission.
     "goose": "omnigent.inner.goose_harness",
+    # GitHub Copilot SDK harness wrap. See omnigent/inner/copilot_harness.py.
+    # In-process SDK harness (``github-copilot-sdk``), like cursor / antigravity:
+    # the SDK bundles the Copilot CLI binary it drives as a backing server, so
+    # Omnigent spawns no separately-installed CLI. Authenticates against GitHub's
+    # Copilot backend with a GitHub token (no Databricks gateway).
+    "copilot": "omnigent.inner.copilot_harness",
 }
 
 __all__ = ["_HARNESS_MODULES"]

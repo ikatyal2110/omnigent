@@ -20,6 +20,9 @@ HARNESS_ALIASES: dict[str, str] = {
     "native-goose": "goose-native",
     # Qwen Code harness alias.
     "qwen-code": "qwen",
+    # User-facing spelling for the GitHub Copilot SDK harness; the canonical id
+    # is "copilot" (matches the registry / workflow type).
+    "github-copilot": "copilot",
 }
 
 # Canonical native-CLI harness spellings. These harnesses type messages into
